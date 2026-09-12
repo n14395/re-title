@@ -3,38 +3,54 @@ import SwiftUI
 struct NumberingActionView: View {
     @Binding var action: NumberingAction
 
+    private var positionOptions: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Position")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
+            Picker("Position", selection: $action.position) {
+                ForEach(NumberPosition.allCases) { position in
+                    Text(position.rawValue).tag(position)
+                }
+            }
+            .labelsHidden()
+            .pickerStyle(.segmented)
+        }
+    }
+
+    private var paddingOptions: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Padding")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
+            Picker("Padding", selection: $action.padding) {
+                ForEach(NumberPadding.allCases) { padding in
+                    Text(padding.rawValue).tag(padding)
+                }
+            }
+            .labelsHidden()
+            .pickerStyle(.segmented)
+        }
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Add Numbering")
                 .font(.headline)
 
-            HStack(spacing: 20) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Position")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-
-                    Picker("Position", selection: $action.position) {
-                        ForEach(NumberPosition.allCases) { position in
-                            Text(position.rawValue).tag(position)
-                        }
-                    }
-                    .labelsHidden()
-                    .pickerStyle(.segmented)
+            // Side by side when the window is wide enough, stacked at narrow widths —
+            // together the two segmented pickers outgrow the window's minimum width.
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 20) {
+                    positionOptions
+                    paddingOptions
                 }
 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Padding")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-
-                    Picker("Padding", selection: $action.padding) {
-                        ForEach(NumberPadding.allCases) { padding in
-                            Text(padding.rawValue).tag(padding)
-                        }
-                    }
-                    .labelsHidden()
-                    .pickerStyle(.segmented)
+                VStack(alignment: .leading, spacing: 16) {
+                    positionOptions
+                    paddingOptions
                 }
             }
 

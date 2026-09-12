@@ -1,4 +1,3 @@
-# build.sh output (.app / .dmg / .derived)
 build/
 .DS_Store
 xcuserdata/
