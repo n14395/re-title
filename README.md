@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="ReTitle/Assets.xcassets/AppIcon.appiconset/AppIcon128x128.png" alt="ReTitle icon" width="128">
+  <img src="app-icon.png" alt="ReTitle icon" width="128">
 </p>
 
 <h1 align="center">ReTitle</h1>
@@ -25,15 +25,15 @@ Every change is shown in real time. Modified text is highlighted in blue, and po
 
 ### Seven rename actions
 
-| Action | What it does |
-|---|---|
-| **Replace** | Find and replace text, with full regular expression support |
-| **Insert** | Add text at the beginning, end, or any position within the filename |
-| **Remove** | Strip characters from the start, end, a range, or remove specific characters |
-| **Case** | Convert to UPPERCASE, lowercase, Title Case, or Sentence case |
-| **Number** | Add sequential numbering with configurable start, increment, padding, and separator |
-| **Date/Time** | Insert timestamps in your preferred format |
-| **Metadata** | Rename files using EXIF data, ID3 tags, or document properties |
+| Action        | What it does                                                                        |
+| ------------- | ----------------------------------------------------------------------------------- |
+| **Replace**   | Find and replace text, with full regular expression support                         |
+| **Insert**    | Add text at the beginning, end, or any position within the filename                 |
+| **Remove**    | Strip characters from the start, end, a range, or remove specific characters        |
+| **Case**      | Convert to UPPERCASE, lowercase, Title Case, or Sentence case                       |
+| **Number**    | Add sequential numbering with configurable start, increment, padding, and separator |
+| **Date/Time** | Insert timestamps in your preferred format                                          |
+| **Metadata**  | Rename files using EXIF data, ID3 tags, or document properties                      |
 
 ![Sequential numbering applied to a batch of photos](Screenshots/Screenshot%203.png)
 
