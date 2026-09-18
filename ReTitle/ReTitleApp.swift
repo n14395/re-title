@@ -10,6 +10,9 @@ struct ReTitleApp: App {
 
     init() {
         ReviewPrompt.registerLaunch()
+        #if SPARKLE
+        SparkleUpdater.start()
+        #endif
     }
 
     var body: some Scene {
@@ -31,6 +34,9 @@ struct ReTitleApp: App {
         .windowResizability(.contentMinSize)
         .commands {
             ReTitleCommands()
+            #if SPARKLE
+            SparkleCommands()
+            #endif
         }
     }
 }
