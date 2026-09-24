@@ -85,3 +85,8 @@ xcodebuild test -project ReTitle.xcodeproj -scheme ReTitle
 ## Architecture
 
 ReTitle is built with SwiftUI using the `@Observable` macro. Each rename action implements a common `RenameAction` protocol, so transformations are applied uniformly and previewed live by `RenameViewModel`. Metadata extraction uses ImageIO for photos, AVFoundation for audio/video, and PDFKit for documents. The app is sandboxed, with access limited to files you explicitly select.
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
+Third-party attribution is in [NOTICE](NOTICE).
