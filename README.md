@@ -63,7 +63,16 @@ Files are renamed locally — nothing leaves your Mac. No telemetry, no account,
 
 ## Requirements
 
-- macOS 26.2 or later
+- macOS 14.6 (Sonoma) or later
+
+## Install
+
+```sh
+brew tap n14395/tap
+brew install --cask re-title
+```
+
+Or download the `.dmg` from [Releases](../../releases) and drag ReTitle to Applications.
 
 ## Building from source
 
